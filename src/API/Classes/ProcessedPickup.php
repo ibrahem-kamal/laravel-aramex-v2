@@ -16,7 +16,7 @@ class ProcessedPickup implements Normalize
     private string $id;
     private string $guid;
     private string $reference1;
-    private string $reference2;
+    private ?string $reference2=null;
     private array $processedShipments;
 
     /**
