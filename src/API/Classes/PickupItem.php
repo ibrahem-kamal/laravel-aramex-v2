@@ -15,15 +15,15 @@ class PickupItem implements Normalize
     private string $productGroup;
     private string $productType;
     private int $numberOfShipments;
-    private ?string $packageType;
+    private ?string $packageType = null;
     private string $payment;
     private Weight $shipmentWeight;
-    private ?Volume $shipmentVolume;
+    private ?Volume $shipmentVolume = null;
     private int $numberOfPieces;
-    private ?Money $cashAmount;
-    private ?Money $extraCharges;
-    private ?Dimension $shipmentDimensions;
-    private ?string $comments;
+    private ?Money $cashAmount = null;
+    private ?Money $extraCharges = null;
+    private ?Dimension $shipmentDimensions = null;
+    private ?string $comments = null;
 
     /**
      * @return string
