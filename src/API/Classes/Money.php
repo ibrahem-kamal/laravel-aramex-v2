@@ -16,7 +16,7 @@ class Money implements Normalize
     private string $currencyCode;
     private float $value;
 
-    public function __construct($value, $currencyCode)
+    public function __construct($value = 0, $currencyCode = "")
     {
         $this->value = $value;
         $this->currencyCode = $currencyCode;
