@@ -29,11 +29,11 @@ class Pickup implements Normalize
     private int $readyTime;
     private int $lastPickupTime;
     private int $closingTime;
-    private ?string $comments;
+    private ?string $comments=null;
     private string $reference1;
-    private ?string $reference2;
-    private ?string $vehicle;
-    private ?array $shipments;
+    private ?string $reference2=null;
+    private ?string $vehicle=null;
+    private ?array $shipments=[];
     private array $pickItems;
     private string $status;
 
