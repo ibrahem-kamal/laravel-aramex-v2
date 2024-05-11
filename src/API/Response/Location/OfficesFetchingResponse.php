@@ -54,15 +54,13 @@ class OfficesFetchingResponse extends Response
                 if (property_exists($office, 'Address')) {
                     $addressObj = $office->Address;
 
-                    $officeAddress = new Address();
+                    $officeAddress = new Address($addressObj->Line1,$addressObj->CountryCode);
                     $officeAddress
-                        ->setLine1($addressObj->Line1)
                         ->setLine2($addressObj->Line2)
                         ->setLine3($addressObj->Line3)
                         ->setCity($addressObj->City)
                         ->setStateOrProvinceCode($addressObj->StateOrProvinceCode)
                         ->setPostCode($addressObj->PostCode)
-                        ->setCountryCode($addressObj->CountryCode)
                         ->setLongitude($addressObj->Longitude)
                         ->setLatitude($addressObj->Latitude)
                         ->setBuildingNumber($addressObj->BuildingNumber)
